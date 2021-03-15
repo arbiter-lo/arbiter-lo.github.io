@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   font-family: Open Sans;
   margin: 0;
   height: 100%;
-  scroll-behavior: smooth;
-  transition: 0.3s;
 }
 
 .row::after {
@@ -113,9 +115,9 @@ body, html {
      float: left;
      display: block;
      max-width: 30vw;
-     padding: 5vh 5vw;
      font-size: 16px;
      line-height: 26px;
+     padding: 5vh 5vw;
      margin: 0px auto !important;
    }
 
@@ -125,8 +127,9 @@ body, html {
   perspective: 1px;
   transform-style: preserve-3d;
   overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100vh;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 1;
 }
 
 .parallax {
@@ -137,11 +140,13 @@ body, html {
   height: 100vh;
   justify-content: center;
   align-items: flex-end;
-  transform: translateZ(-1px) scale(2.1);
+  transform: translateZ(-1px) scale(1.6);
   background: url(../img/profile-pic.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: black;
+
 }
 
 .parallax h1 {
@@ -155,7 +160,7 @@ body, html {
 }
 
 .content-container {
-  position: relative;
+  position: static;
   display: block;
   background-color: white;
   z-index: 1;
@@ -166,6 +171,7 @@ body, html {
   margin: 0 auto;
   padding: 45px 0;
   float: none;
+  background-color: white;
 }
 
 .small {
@@ -174,13 +180,22 @@ body, html {
 
 .wide {
   width: 100vw;
+  height: auto;
+
 }
 
 .content img {
   width: 100vw;
   display: block;
-  height: auto;
+  height: 100%;
   background-blend-mode: normal;
+  box-sizing: border-box;
+}
+
+.content img.center {
+
+  max-width: 100%;
+  margin: 8vh auto;
 }
 
 .content h1 {
@@ -198,10 +213,11 @@ body, html {
 }
 
 .content.wide p {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 80%;
 }
 
+/* navigation style */
 #navBtn {
   position: fixed;
   top: 0;
