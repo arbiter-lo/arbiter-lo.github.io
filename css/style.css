@@ -379,7 +379,7 @@ body, html {
 .card-subject {
   display: block;
   width: 80%;
-  min-height: 69vh;
+  min-height: 70vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   text-align: justify;
