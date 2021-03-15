@@ -258,6 +258,7 @@ body, html {
    .content img{
      max-width: 65vw;
      float: left;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
    }
 
    .content img.center {
@@ -350,9 +351,9 @@ body, html {
 }
 
 .content img.center {
-
   max-width: 100%;
   margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .content h1 {
@@ -378,7 +379,7 @@ body, html {
 .card-subject {
   display: block;
   width: 80%;
-  height: auto;
+  min-height: 69vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   text-align: justify;
@@ -393,7 +394,7 @@ body, html {
   top: 2vh;
   left: 0;
   width: 75% !important;
-  height: 75%;
+  height: auto;
   border-radius: 50%;
   margin: 15px auto;
 }
